@@ -5,6 +5,7 @@
  */
 package teoria_de_grafos;
 
+import javax.swing.JOptionPane;
 /**
  *
  * @author Usuario
@@ -16,6 +17,7 @@ public class Teoria_de_grafos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Interfaz i = new Interfaz();
+        i.setVisible(true);
     }
-    
 }
