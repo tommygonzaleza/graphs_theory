@@ -84,7 +84,7 @@ public class Lista {
             return aux;
         }
     }
-    public void Insertar_final(String Nombre, int ID, int anio) {
+    public void Insertar_final( int ID,String Nombre, int anio) {
         Nodo nuevo = new Nodo(Nombre,ID,anio);
         if (esVacio()) {
             first = last = nuevo;

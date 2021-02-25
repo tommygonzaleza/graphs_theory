@@ -24,6 +24,7 @@ public class Funciones {
         String peliculas_csv = "";
         String path = filepath;
         File file = new File(path);
+        
         try {
             if (!file.exists()) {
                 file.createNewFile();
@@ -42,9 +43,9 @@ public class Funciones {
                 if (!"".equals(peliculas_csv)) {
                     String[] peliculas_split = peliculas_csv.split("\n");
                     for (int i = 0; i < peliculas_split.length ; i++) {
-                        if (!peliculas_split[i].equals("Nombre,ID,anio")) {
+                        if (!peliculas_split[i].equals("id,title,year")&& !peliculas_split[i].isEmpty()) {
                             String[] pelicula = peliculas_split[i].split(",");
-                            personas.Insertar_final(pelicula[0],Integer.parseInt(pelicula[1]), Integer.parseInt(pelicula[2]));
+                            personas.Insertar_final(Integer.parseInt(pelicula[1]),(pelicula[0]), Integer.parseInt(pelicula[2]));
 
                         }
 
