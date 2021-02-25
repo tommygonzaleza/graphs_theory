@@ -13,16 +13,19 @@ public class Lista {
     private Nodo first;
     private String nombre;
     private int tamano;
+    private Nodo last;
     
     public Lista(String nombre_lista){
         this.first = null;
         this.nombre = nombre_lista;
         this.tamano = 0;
+        this.last=null;
     }
     
     public void setPrimero(Nodo Point){
         this.first = Point;
     }
+   
     
     public int length(){
         return tamano;
@@ -80,5 +83,16 @@ public class Lista {
             }
             return aux;
         }
+    }
+    public void Insertar_final(String Nombre, int ID, int anio) {
+        Nodo nuevo = new Nodo(Nombre,ID,anio);
+        if (esVacio()) {
+            first = last = nuevo;
+        } else {
+            //nuevo.setSiguiente(last.getSiguiente());
+            last.setPnext(nuevo);
+            last = nuevo;
+        }
+        tamano++;
     }
 }

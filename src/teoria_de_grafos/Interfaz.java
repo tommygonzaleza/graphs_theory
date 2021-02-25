@@ -422,17 +422,20 @@ public class Interfaz extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, name);
         String csv = "csv";
         if (filename.length() > 3) {
-            if(name.equals(csv)){
+            if (name.equals(csv)) {
                 jTextField2.setText(filepath);
-                JOptionPane.showMessageDialog(null, "Formato del Archivo: "+name);
+                JOptionPane.showMessageDialog(null, "Formato del Archivo: " + name);
+                Funciones func = new Funciones();
+                Lista actores = func.leer_csv(filepath);
             } else {
-                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No "+name);
+                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No " + name);
             }
         } else {
             // whatever is appropriate in this case
             JOptionPane.showMessageDialog(null, "El archivo tiene menos de tres caracteres. ");
         }
-        
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -448,13 +451,15 @@ public class Interfaz extends javax.swing.JFrame {
         String filepath = f.getAbsolutePath();
         String name = filename.substring(filename.length() - 3);
         JOptionPane.showMessageDialog(null, name);
+        Funciones func = new Funciones();
+        Lista peliculas = func.leer_csv(filepath);
         String csv = "csv";
         if (filename.length() > 3) {
-            if(name.equals(csv)){
+            if (name.equals(csv)) {
                 jTextField3.setText(filepath);
-                JOptionPane.showMessageDialog(null, "Formato del Archivo: "+name);
+                JOptionPane.showMessageDialog(null, "Formato del Archivo: " + name);
             } else {
-                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No "+name);
+                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No " + name);
             }
         } else {
             // whatever is appropriate in this case
@@ -477,11 +482,11 @@ public class Interfaz extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, name);
         String csv = "csv";
         if (filename.length() > 3) {
-            if(name.equals(csv)){
+            if (name.equals(csv)) {
                 jTextField4.setText(filepath);
-                JOptionPane.showMessageDialog(null, "Formato del Archivo: "+name);
+                JOptionPane.showMessageDialog(null, "Formato del Archivo: " + name);
             } else {
-                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No "+name);
+                JOptionPane.showMessageDialog(null, "El archivo debe ser de tipo csv. No " + name);
             }
         } else {
             // whatever is appropriate in this case
